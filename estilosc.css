@@ -1,0 +1,198 @@
+* {
+        margin:0px;
+        padding:0px;
+      }
+/**************************************************************************************************************************/
+.iniciarsesion ul li{
+  float: right;
+}
+
+.wrapper {
+  width: 100%;
+  margin: auto;
+  overflow:hidden;
+}
+
+.contenido {
+  padding-top: 80px;
+}
+
+nav {
+  float: left; 
+}
+ 
+nav ul {
+  list-style: none;
+  overflow: hidden; 
+}
+ 
+nav ul li {
+  float: left;
+  font-family: 'Droid Sans', sans-serif;
+  font-size: 17px;
+}
+ 
+nav ul li a {
+  display: block; 
+  padding: 20px;
+  color: black;
+  text-decoration: none;
+  border-radius: 
+ 20px 20px  20px  20px ;
+}
+ 
+
+header nav {
+  background: black;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  
+   
+
+
+}
+
+      #header {
+        margin:auto;
+        width:500px;
+        font-family: 'Droid Sans', sans-serif;
+      }
+      
+      * {
+  padding: 0;
+  margin: 0;
+}
+ 
+/*Agregamos margenes inferiores a los parrafos*/
+p {
+  margin-bottom: 22px;
+}
+
+/*************************************************/  
+      
+      /******esto es para la barra de inicio , galeria y contacto *******/
+      nav li a:hover {
+        background-color:#000;
+         transition: background-color .5s;
+        color:white;
+        text-decoration:none;
+
+        
+
+        }
+
+      nav li a {
+        background-color:#000;
+        color:white;
+         transition: background-color .8s;
+        text-decoration:none;
+        
+      }
+      /******aqui termina la barra de inicio , galeria y contacto *******/
+
+
+      /**-------------------------**/
+      nav li a{
+         
+        background-color:white;
+        color: white;
+      }
+       /**-------------------------**/
+      nav li a:hover{
+        background-color:white;
+      }
+      
+/****************************************/
+      
+  
+
+
+
+
+.kidsf {
+background-color: white;
+  transition: background-color .5s;
+  
+  
+      
+}
+.kidsf:hover{
+color: black ;
+transition: color black;
+}
+
+/*SLIDER*/
+
+/**letras de lado**/
+.Rotate-90
+{
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+ 
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+ 
+  font-size: 21px;
+  width: 20%;
+  position: relative;
+  top: 40px;
+  padding: 2rem;
+  color: #121212 ;
+ font-family: 'Droid Sans', sans-serif;
+
+  /**seleccionar**/
+  }
+  *::selection {
+    background-color: white;
+    color: black;
+}
+ 
+*::-moz-selection {
+    background-color:white;
+    color: black;
+}
+
+/*************** footer *****************/
+
+footer{
+  background: #597F87;
+  width: 100%;
+  height: 10%;
+  margin-bottom: 0;
+ 
+
+}
+.fo nav li a:hover{
+  background-color:#58709B ;
+         transition: background-color .5s;
+       
+        text-decoration:none;
+        
+
+        }
+
+   .fo   nav li a {
+        background-color:#597F87;
+        color:white;
+         transition: background-color .8s;
+        text-decoration:none;
+        
+      }
+/*************** footer *****************/
+hr {
+  height: 20px;
+
+  background-color: black;
+}
+#contenido {
+    width: 700px;
+    margin-right: auto;
+    margin-left: auto;
+}

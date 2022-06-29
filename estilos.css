@@ -1,0 +1,93 @@
+ {
+        margin:0px;
+        padding:0px;
+      }
+      
+      #header {
+        margin:auto;
+        width:500px;
+        font-family:Arial, Helvetica, sans-serif;
+      }
+      
+      ul, ol {
+          list-style-type: none;
+    margin: 0;
+    padding: 0;
+      }
+      
+      .nav {
+        width:500px; /*Le establecemos un ancho*/
+        margin:100 1 5; /*Centramos automaticamente*/
+      }
+ 
+      .nav > li {
+        float:left;
+      }
+      /******esto es para la barra de inicio , galeria y contacto *******/
+      .nav li a:hover {
+        background-color:#000;
+        color:black;
+        text-decoration:none;
+        padding:10px 15px;
+        display:block;
+
+        }
+
+      .nav li a {
+        background-color:#000;
+        color:white;
+        text-decoration:none;
+        padding:10px 15px;
+        display:block;
+      }
+      /******aqui termina la barra de inicio , galeria y contacto *******/
+
+
+      /**-------------------------**/
+      .nav2 li a{
+        background-color:white;
+        color: black;
+      }
+       /**-------------------------**/
+      .nav li a:hover{
+        background-color:white;
+      }
+      
+      .nav li ul {
+        display:none;
+        position:absolute;
+        min-width:140px;
+      }
+      
+      .nav li:hover > ul {
+        display:block;
+      }
+      
+      .nav li ul li {
+        position:relative;
+      }
+      
+      .nav li ul li ul {
+        right:-140px;
+        top:0px;
+        
+      }
+      .redd{
+        text-align: center;
+        align-items: center;
+        color: white;
+      }
+
+/********************boton ir arrivba************************/
+      
+      .ir-arriba{
+  display:none;
+  background-repeat:no-repeat;
+  font-size:20px;
+  color:black;
+  cursor:pointer;
+  position:fixed;
+  bottom:10px;
+  right:10px;
+  z-index:2;
+}

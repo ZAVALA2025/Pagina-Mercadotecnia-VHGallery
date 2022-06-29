@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VHUL GALLERY-NOTICIAS</title>
+    <link rel="stylesheet" type="text/css" href="css/est4.css">
+    <link rel="icon" href="img/unnamed.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Kurale&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+
+<body style="text-decoration: none" vlink="black" alink="black">
+    <header>
+    <div id="sidemenu" class="menu-collapsed" >
+            <!--HEADER-->
+            <div id="header">
+            <div id="title"><span>VHUL GALLERY</span></div>
+            <div id="menu-btn">
+            <div class="btn-hamburger"></div>
+            <div class="btn-hamburger"></div>
+            <div class="btn-hamburger"></div>
+            </div>
+            </div>
+            <!--PROFILE-->
+            <div id="profile">
+            <div id="foto"><img src="img/foto1.png" alt="usuario"></div>
+            <div id="name"><span>Uusario</span></div>
+            </div>
+
+            <!--ITEMS-->
+            <div id="menu-items">
+                <div class="item">
+                    <a href="cuenta.html">
+                        <div class="icon"><img src="img/casa.png" alt="icono1"></div>
+                        <div class="title"><span>Home</span></div>
+                    </a>
+                </div>
+                <div class="item separator"></div>
+                <div class="item">
+                    <a href="artista.html">
+                        <div class="icon"><img src="img/usuario.png" alt="icono1"></div>
+                        <div class="title"><span>Artista</span></div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="noticias.html">
+                        <div class="icon"><img src="img/news.png" alt="icono1"></div>
+                        <div class="title"><span>Noticias</span></div>
+                    </a>
+                </div>
+                <div class="item separator"></div>
+            </div>
+        </div>
+        <div id="main-container"></div>
+        <script>
+            const btn = document.querySelector('#menu-btn');
+            const menu = document.querySelector('#sidemenu');/Cada click se intercambian las 2 clases/
+            btn.addEventListener('click', e => {
+                menu.classList.toggle("menu-expanded");
+                menu.classList.toggle("menu-collapsed");
+
+                document.querySelector('body').classList.toggle('body-expanded');/Para expandir el body/
+
+            });
+        </script>
+</header>
+    <h1 class="h1">Lo mejor del arte</h1>
+    <div class="padre">
+        <div class="linkk">
+            <a href="artecovid.html" style="text-decoration: none;"><h3 class="text1">El arte ayuda a mejorar la salud en pacientes con COVID-19</h3></a>
+            <img src="img/img-ac.jpg" alt="El arte ayuda a mejorar la salud" class="imga1">
+            <a href="artec.html" style="text-decoration: none;"><h3 class="text2">El arte no se detiene por el coronavirus</h3></a>
+            <img src="img/img-ic.jpg" alt="El arte no se detiene" class="imga2">
+            <a href="arteh.html" style="text-decoration: none;"><h3 class="text3">Homenajean con arte al personal sanitario</h3></a>
+            <img src="img/img-aps.jpg" alt="Homenaje al personal sanitario" class="imga3">  
+        </div>
+        <div class="link2">
+            <a href="arteesc.html" style="text-decoration: none;"><h3 class="text4">Un artista crea una obra entre los escombros de una galería tras la explosión en Beirut</h3></a>
+            <img src="img/img-pb.jpg" alt="Arte entre los escombros en Beirut" class="imga4">
+            <a href="artegrande.html" style="text-decoration: none;"><h3 class="text5">¡La pintura en el lienzo más grande del mundo!</h3></a>
+            <img src="img/img-pg.jpg" alt="La pintura más grande del mundo" class="imga5"> 
+            <a href="artev.html" style="text-decoration: none;"><h3 class="text6">Artista venezolana ilustra la violencia de género en México</h3></a>
+            <img src="img/img-vg.jpg" alt="Venezolana ilustra la violencia de género" class="imga6">  
+        </div>
+    </div>
+</body>
+</html>

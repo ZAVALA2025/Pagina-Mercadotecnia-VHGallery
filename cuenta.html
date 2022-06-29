@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VHUL-GALLERY</title>
+    <link rel="icon" href="img/unnamed.ico">
+    <link rel="stylesheet" href="css/est1.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <div id="sidemenu" class="menu-collapsed" >
+            <!--HEADER-->
+            <div id="header">
+                <div id="title"><span>VHUL GALLERY</span></div>
+                <div id="menu-btn">
+                    <div class="btn-hamburger"></div>
+                    <div class="btn-hamburger"></div>
+                    <div class="btn-hamburger"></div>
+<!--Cambio1-->
+                    <div class="btn-hamburger"></div>
+<!--Fin Cambio1-->
+                </div>
+            </div>
+            <!--PROFILE-->
+        <div id="profile">
+            <div id="foto"><img src="img/foto1.png" alt="usuario"></div>
+            <div id="name"><span>Usuario</span></div>
+            </div>
+
+            <!--ITEMS-->
+            <div id="menu-items">
+                <div class="item">
+                    <a href="cuenta.html">
+                        <div class="icon"><img src="img/casa.png" alt="icono1"></div>
+                        <div class="title"><span>Home</span></div>
+                    </a>
+                </div>
+                <div class="item separator"></div>
+                <div class="item">
+                    <a href="artista.html">
+                        <div class="icon"><img src="img/usuario.png" alt="icono1"></div>
+                        <div class="title"><span>Artista</span></div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="noticias.html">
+                        <div class="icon"><img src="img/news.png" alt="icono1"></div>
+                        <div class="title"><span>Noticias</span></div>
+                    </a>
+                </div>
+<!--Cambio 2-->
+                <div class="item2">
+                    <a href="index.html">
+                        <div class="icon2"><img src="img/salida.png" alt="icono1"></div>
+                        <div class="title2"><span>Cerrar Sesión</span></div>
+                    </a>
+                </div>
+<!--Fin Cambio 2-->
+                <div class="item separator"></div>
+            </div>
+        </div>
+        <div id="main-container"></div>
+        <script>
+            const btn = document.querySelector('#menu-btn');
+            const menu = document.querySelector('#sidemenu');/*Cada click se intercambian las 2 clases*/
+            btn.addEventListener('click', e => {
+                menu.classList.toggle("menu-expanded");
+                menu.classList.toggle("menu-collapsed");
+
+                document.querySelector('body').classList.toggle('body-expanded');/*Para expandir el body*/
+
+            });
+        </script>
+    <!--SLIDER-->
+    <br>
+    <br>
+        <div class="id">
+            <div class="slider1">
+                    <div class="slides">
+                        <input type="radio" name="radio-btn" id="radio1">
+                        <input type="radio" name="radio-btn" id="radio2">
+                        <input type="radio" name="radio-btn" id="radio3">
+                        <input type="radio" name="radio-btn" id="radio4">
+            <!--inicio de slider-->
+                        <div class="slide first">
+                            <img src="img/12.jpg" alt="img1" class="im1">
+                        </div>
+                        <div class="slide">
+                            <img src="img/7.jpg" alt="img2" class="im1">
+                        </div>
+                        <div class="slide">
+                            <img src="img/11.jpg" alt="img3" class="im1">
+                        </div>
+                        <div class="slide">
+                            <img src="img/8.jpg" alt="img4" class="im1">
+                        </div>
+            <!--Fin de slider-->
+            <!--Inicio de Navegacion-->
+                        <div class="navigation-auto">
+                            <div class="auto-btn1"></div>
+                            <div class="auto-btn2"></div>
+                            <div class="auto-btn3"></div>
+                            <div class="auto-btn4"></div>
+                        </div>
+            <!--Fin de navegacion-->
+                    </div>
+            <!--Inicio de navegacion manual-->
+                    <div class="navigation-manual">
+                        <label for="radio1" class="manual-btn"></label>
+                        <label for="radio2" class="manual-btn"></label>
+                        <label for="radio3" class="manual-btn"></label>
+                        <label for="radio4" class="manual-btn"></label>
+                    </div>
+            <!--Fin de navegacion manual-->
+            </div>
+            <script type="text/javascript">
+            var counter = 1;
+            setInterval(function(){
+                document.getElementById('radio' + counter).checked = true;
+                counter++;
+                if(counter > 4){
+                    counter = 1;
+                }
+            }, 5000);
+            </script>
+        </div>
+    </header>
+    <div class="te">
+        <p class="pi" ><Script language="JavaScript">
+mensagem = prompt("Por favor, ingresa tu nombre",'');
+if (mensagem==null) {
+document.write("¡Hola, visitante!")
+}else{
+if (mensagem=='') {
+document.write("<b><font face=arial size=5 color=#000000>¡Hola, visitante!</font></b>")
+}else{
+document.write("<b><font face=arial size=5 color=#000000>¡Hola,&nbsp;"+mensagem+"! Bienvenido a mi sitio<font size= 5> 😀</font></font></b>");
+}
+}
+</script></p>
+    </div>
+    <div class="els">
+        <p class="pa"><b>Frase del Día:</b></p>
+        <p class="pap">Despertar cada día para vivir la vida es un regalo que debes apreciar. 
+        Da la bienvenida a cada uno de tus días.</p>
+    </div>
+    <main class="opo">
+       <!--HOVER-->
+       <!--IMG1-->
+       <a href="lil.html" class="lin">
+            <div class="div1">
+                <figure><img src="img/mis.jpg" alt="" class="id1">
+                <div class="capa">
+                    <h3>Mi Galeria</h3>
+                    <p>La vida no se trata de poder hacer, se trata de querer hacer</p>
+                </div>
+                </figure>
+            </div>
+        </a>
+        <!--IMG2-->
+        <a href="dib.html" class="lin2">
+            <div class="div2">
+                <figure><img src="img/libre.jpg" alt="" class="id2">
+                <div class="capa2">
+                    <h3>Se libre de publicar tus obras</h3>
+                    <p>Somos facilitadores de nuestra propia evolución creativa</p>
+                </div>
+                </figure>
+            </div>
+        </a>
+
+    </main>
+</body>
+</html>

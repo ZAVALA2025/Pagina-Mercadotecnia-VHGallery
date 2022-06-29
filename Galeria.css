@@ -1,0 +1,111 @@
+body {
+    background-image: linear-gradient(to top, #ecedee 1%, #eceeef 100%, #e7e8e9 100%);
+    min-height: 100vh;
+    font: normal 16px sans-serif;
+    padding: 60px 1px;
+}
+
+.container.gallery-container {
+    background-color: white;
+    color: #272729 ;
+    min-height: 100vh;
+    border-radius: 40px;
+
+    box-shadow: 0 8px 15px rgba(1, 1, 1, 0.06);
+}
+
+.gallery-container h1 {
+    text-align: center;
+    margin-top: 70px;
+    font-family: 'Droid Sans', sans-serif;
+    font-weight: bold;
+}
+
+.gallery-container p.page-description {
+    text-align: center;
+    max-width: 200px;
+    max-height: 200px;
+    margin: 25px auto;
+    color: #888;
+    font-size: 18px;
+}
+
+.tz-gallery {
+    padding: 40px;
+
+}
+
+.tz-gallery .lightbox img {
+    width: 100%;
+    margin-bottom: 30px;
+    transition: 0.2s ease-in-out;
+    box-shadow: 0 2px 3px rgba(1,1,1,1);
+}
+
+
+.tz-gallery .lightbox img:hover {
+    transform: scale(1.06);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.5);
+}
+
+.tz-gallery img {
+    border-radius: 20px;
+}
+
+.baguetteBox-button {
+    background-color: transparent !important;
+}
+
+
+@media(max-width: 708px) {
+    body {
+        padding: 0;
+    }
+
+    .container.gallery-container {
+        border-radius: 0;
+    }
+}
+/*******************iconos*********************/
+.social {
+    position: fixed; 
+    right:  0; 
+    top: 200px; 
+    z-index: 2000; 
+}
+ 
+    .social ul {
+        list-style: none;
+    }
+ 
+    .social ul li a {
+        border-radius: 360px;
+        display: inline-block;
+        color:#fff;
+        background: #000;
+        padding: 15px 20px;
+        text-decoration: none;
+        -webkit-transition:all 500ms ease;
+        -o-transition:all 500ms ease;
+        transition:all 500ms ease; 
+    }
+ 
+    .social ul li .icon-facebook {background:black;} 
+   
+    .social ul li .icon-googleplus {background: black;}
+ 
+    .social ul li .icon-mail {background: black;}
+ 
+    .social ul li a:hover {
+        background: #000; 
+        padding: 15px 30px; 
+    }
+
+.left {
+display: inline-block;
+}
+
+.right {
+display: inline-block;
+
+}

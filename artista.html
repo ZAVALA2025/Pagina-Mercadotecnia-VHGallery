@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/unnamed.ico">
+    <title>Artistas Destacados</title>
+    <link rel="stylesheet" href="css/est3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kurale&display=swap" rel="stylesheet">
+
+    
+</head>
+<body>        
+<!--HEADER-->
+    <div id="sidemenu" class="menu-collapsed" >
+        <div id="header">
+            <div id="title"><span>VHUL GALERRY</span></div>
+            <div id="menu-btn">
+                <div class="btn-hamburger"></div>
+                <div class="btn-hamburger"></div>
+                <div class="btn-hamburger"></div>
+            </div>
+        </div>
+        <!--PROFILE-->
+       <div id="profile">
+           <div id="foto"><img src="img/foto1.png" alt=""></div>
+           <div id="name"><span>Usuario</span></div>
+        </div>
+
+        <!--ITEMS-->
+        <div id="menu-items">
+            <div class="item">
+                <a href="cuenta.html">
+                    <div class="icon"><img src="img/casa.png" alt="icono1"></div>
+                    <div class="title"><span>Home</span></div>
+                </a>
+            </div>
+            <div class="item separator"></div>
+            <div class="item">
+                <a href="artista.html">
+                    <div class="icon"><img src="img/usuario.png" alt="icono1"></div>
+                    <div class="title"><span>Artista</span></div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="noticias.html">
+                    <div class="icon"><img src="img/news.png" alt="icono1"></div>
+                    <div class="title"><span>Noticias</span></div>
+                </a>
+            </div>
+            <div class="item separator"></div>
+        </div>
+    </div>
+    <div id="main-container"></div>
+    <script>
+        const btn = document.querySelector('#menu-btn');
+        const menu = document.querySelector('#sidemenu');/*Cada click se intercambian las 2 clases*/
+        btn.addEventListener('click', e => {
+            menu.classList.toggle("menu-expanded");
+            menu.classList.toggle("menu-collapsed");
+
+            document.querySelector('body').classList.toggle('body-expanded');/*Para expandir el body*/
+
+        });
+    </script>
+
+    <section class="sec">
+        <h1 class="seh">Artistas Destacados</h1>
+    </section>
+
+    <article>
+        <div class="dp">
+            <div class="p1">
+                <img src="img/bass.jpg" alt="Basquiat" class="ima">
+                <h1 class="h1">Basquiat</h1>
+            </div>
+<!--AaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaA-->
+            <div class="div1">
+                <figure><img src="img/basq1.jpg" alt="" class="id1">
+                <div class="capa">
+                    <h3>Head</h3>
+                    <p>Creada en 1981</p>
+                </div>
+                </figure>
+            </div>
+<!--AaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaA-->
+<!--BbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbB-->
+            <div class="div1">
+                <figure><img src="img/basq2.jpg" alt="" class="id1">
+                <div class="capa">
+                    <h3>Boxeador (sin nombre)</h3>
+                    <p>Creada en 1982</p>
+                </div>
+                </figure>
+            </div>
+<!--BbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbB-->
+<!--CcccccccccccccccccccccccccccccccccccccccccccccccccccccC-->
+            <div class="div1">
+                <figure><img src="img/basq3.jpg" alt="" class="id1 uv">
+                <div class="capa">
+                    <h3>Untitled</h3>
+                    <p>Creada en 1981</p>
+                </div>
+                </figure>
+            </div>
+<!--CcccccccccccccccccccccccccccccccccccccccccccccccccccccC-->
+            <div class="pi1">
+                <li class="uvg1">
+            </div> 
+        </div>
+        <div class="dp2">
+            <div class="p2">
+                <img src="img/Andi.jpg" alt="Andy Warhol" class="ima2">
+                <h1 class="h2">Andy Warhol</h1>
+            </div>
+<!--o00000000000000000000000000000000000000000000000000000000-->
+            <div class="divv">
+                <figure><img src="img/and1.jpg" alt="" class="id1">
+                <div class="capa">
+                    <h3>Shot Marilyns</h3>
+                    <p>Creada en 1964</p>
+                </div>
+                </figure>
+            </div>
+<!--o00000000000000000000000000000000000000000000000000000000-->
+<!--o00000000000000000000000000000000000000000000000000000000-->
+            <div class="div1">
+                <figure><img src="img/and2.jpg" alt="" class="id1">
+                <div class="capa">
+                    <h3>Michael Jackson</h3>
+                    <p>Creada en 1984</p>
+                </div>
+                </figure>
+            </div>
+<!--o00000000000000000000000000000000000000000000000000000000-->
+<!--CcccccccccccccccccccccccccccccccccccccccccccccccccccccC-->
+            <div class="div1">
+                <figure><img src="img/and3.jpg" alt="" class="id1 uv">
+                <div class="capa">
+                    <h3>?</h3>
+                    <p>Creada en ?</p>
+                </div>
+                </figure>
+            </div>
+<!--CcccccccccccccccccccccccccccccccccccccccccccccccccccccC-->
+            <div class="pi1">
+                <i class="uvg1">
+            </div> 
+        </div>
+        
+        <div class="dp3">
+            <div class="p3">
+                <img src="img/joa.jpg" alt="Joan Miró" class="ima3">
+                <h1 class="h3">Joan Miró</h1>
+            </div>
+<!--o00000000000000000000000000000000000000000000000000000000-->
+            <div class="div2">
+                <figure><img src="img/miro1.jpg" alt="" class="id1">
+                <div class="capa">
+                    <h3>Hirondelle Amour</h3>
+                    <p>Creada en 1933-1934</p>
+                </div>
+                </figure>
+            </div>
+<!--o00000000000000000000000000000000000000000000000000000000-->
+<!--o00000000000000000000000000000000000000000000000000000000-->
+            <div class="div1">
+                <figure><img src="img/miro2.jpg" alt="" class="id1">
+                <div class="capa">
+                    <h3>?</h3>
+                    <p>Creada en ?</p>
+                </div>
+                </figure>
+            </div>
+<!--o00000000000000000000000000000000000000000000000000000000-->
+<!--o00000000000000000000000000000000000000000000000000000000-->
+            <div class="div1">
+                <figure><img src="img/miro3.jpg" alt="" class="id1">
+                <div class="capa">
+                    <h3>La masía</h3>
+                    <p>Creada en 1922</p>
+                </div>
+                </figure>
+            </div>
+<!--o00000000000000000000000000000000000000000000000000000000-->
+            <div class="pi3">
+                <i class="uvg1">
+            </div> 
+        </div>
+
+        <div class="dp4">
+            <div class="p4">
+                <img src="img/usua.jpg" alt="Banksy" class="ima4">
+                <h1 class="h4">Banksy</h1>
+            </div>
+<!--o00000000000000000000000000000000000000000000000000000000-->
+            <div class="div3">
+                <figure><img src="img/ban1.jpg" alt="" class="id1">
+                <div class="capa">
+                    <h3>Niña con el globo</h3>
+                    <p>Creada en 2002</p>
+                </div>
+                </figure>
+            </div>
+<!--o00000000000000000000000000000000000000000000000000000000-->
+<!--o00000000000000000000000000000000000000000000000000000000-->
+            <div class="div1">
+                <figure><img src="img/ban2.jpg" alt="" class="id1">
+                <div class="capa">
+                    <h3>Slave Labour</h3>
+                    <p>Creada en 2012 en una tienda de Londres</p>
+                </div>
+                </figure>
+            </div>
+<!--o00000000000000000000000000000000000000000000000000000000-->
+<!--o00000000000000000000000000000000000000000000000000000000-->
+            <div class="div1">
+                <figure><img src="img/ban3.jpg" alt="" class="id1">
+                <div class="capa">
+                    <h3>Painting for Saints</h3>
+                    <p>Creada en 2020 en Reino Unido</p>
+                </div>
+                </figure>
+            </div>
+<!--o00000000000000000000000000000000000000000000000000000000-->
+
+            <div class="pi4">
+                <i class="uvg1">
+            </div> 
+        </div>
+
+        <div class="dp5">
+            <div class="p5">
+                <img src="img/pica.jpg" alt="Picasso" class="ima5">
+                <h1 class="h5">Picasso</h1>
+            </div>
+<!--o00000000000000000000000000000000000000000000000000000000-->
+            <div class="div4">
+                <figure><img src="img/pic1.jpg" alt="" class="id1">
+                <div class="capa">
+                    <h3>La mujer que llora</h3>
+                    <p>Creada en 1937</p>
+                </div>
+                </figure>
+            </div>
+<!--o00000000000000000000000000000000000000000000000000000000-->
+<!--o00000000000000000000000000000000000000000000000000000000-->
+            <div class="div1">
+                <figure><img src="img/pic2.jpg" alt="" class="id1">
+                <div class="capa">
+                    <h3>Mujer frente al espejo</h3>
+                    <p>Creada en 1932</p>
+                </div>
+                </figure>
+            </div>
+<!--o00000000000000000000000000000000000000000000000000000000-->
+<!--o00000000000000000000000000000000000000000000000000000000-->
+            <div class="div1">
+                <figure><img src="img/pic3.jpg" alt="" class="id1">
+                <div class="capa">
+                    <h3>Familia de saltimbanquis</h3>
+                    <p>Creada en 1905</p>
+                </div>
+                </figure>
+            </div>
+<!--o00000000000000000000000000000000000000000000000000000000-->
+            <div class="pi5">
+                <i class="uvg1">
+            </div> 
+        </div>
+
+        <div class="dp6">
+            <div class="p6">
+                <img src="img/dali.jpg" alt="Salvador Dalí" class="ima6">
+                <h1 class="h6">Salvador Dalí</h1>
+            </div>
+<!--o00000000000000000000000000000000000000000000000000000000-->
+            <div class="div5">
+                <figure><img src="img/dali1.jpg" alt="" class="id1">
+                <div class="capa">
+                    <h3>La persistencia de la Memoria</h3>
+                    <p>Creada en 1931</p>
+                </div>
+                </figure>
+            </div>
+<!--o00000000000000000000000000000000000000000000000000000000-->
+<!--o00000000000000000000000000000000000000000000000000000000-->
+            <div class="div1">
+                <figure><img src="img/dali2.jpg" alt="" class="id1">
+                <div class="capa">
+                    <h3>Construcción blanda con judías hervidas</h3>
+                    <p>Creada en 1936</p>
+                </div>
+                </figure>
+            </div>
+<!--o00000000000000000000000000000000000000000000000000000000-->
+<!--o00000000000000000000000000000000000000000000000000000000-->
+            <div class="div1">
+                <figure><img src="img/dali3.jpg" alt="" class="id1">
+                <div class="capa">
+                    <h3>Familia de saltimbanquis</h3>
+                    <p>Creada en 1905</p>
+                </div>
+                </figure>
+            </div>
+<!--o00000000000000000000000000000000000000000000000000000000-->
+            <div class="pi6">
+                <i class="uvg1">
+            </div> 
+        </div>
+
+        
+        
+    </article>
+</body>
+</html>

@@ -1,0 +1,220 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kids</title>
+  <link rel="shortcut icon"  href="img/kidp.png" />
+<link href="kids.css" rel="stylesheet"  />
+<link href="kids.css" rel="stylesheet" media="screen"/>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js" type="text/javascript"></script>
+<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+</head>
+<body bgcolor="#F2F2F2 " >
+  <header>
+    <div style="background-color: black ;">&nbsp</div>
+
+    
+ 
+  <div id="container">
+      <canvas id="canvas"></canvas><!-- /canvas -->
+      <div id="config"> 
+
+      <span class="top">&nbsp; 
+      &nbsp;<strong><font size="6"><font color=" #FE1717 ">k</font><font color="  #FECD17 ">i</font><font color=" #3E9EF2 ">d</font><font color=" #3FCF2E ">s</font></font></strong> </span>
+      <br>
+       <br>
+      <ul id="config_in">
+        <li>
+          <Script language="JavaScript">
+mensagem = prompt("Por favor, ingresa tu nombre",'');
+if (mensagem==null) {
+document.write("¡Hola, visitante!")
+}else{
+if (mensagem=='') {
+document.write("<b><font face=arial size=2.5 color=#000000>¡Hola, visitante!</font></b>")
+}else{
+document.write("<b><font face=arial size=2.5 color=#000000>¡Hola,&nbsp;"+mensagem+"! Bienvenido a mi sitio<font size= 5> 😀</font></font></b>");
+}
+}
+</script>
+<br>
+<br>
+      
+
+          Herramientas:
+          <p>
+            <select id="herramientas">
+              <option selected="selected">Pincel</option>
+              <option>Goma</option>
+              <option>Texto</option>
+              
+            </select>
+          </p>
+        </li>
+        <li id="txt">
+          Texto:
+          <p>
+            <input type="text" id="valor_t" placeholder="escribe aqu&iacute; tu texto">
+            <select id="texto">
+              <option selected="selected">Arial</option>
+              <option>Verdana</option>
+              <option>Impact</option>
+              <option >Comic Sans</option>
+            </select>
+          </p>
+        </li>
+        <li>
+          tama&ntilde;o: <span id="n_range">5</span>
+          <p>
+            <input type="range" id="rr" min="1" max="100" value="5"><!-- #rr es el valor -->
+          </p>
+        </li><!-- tamaño -->
+        <li>
+          Color: <input id="color" name="color" type="color" value='#000'>
+        </li>
+        <li>
+          Color de fondo: <input id="bg_color" name="bg_color" type="color" value='#fff'>
+        </li>
+        <li>
+          <button><a href="index.html#abajo" class="volver" target="_self">volver</a></button>
+        </li>
+      </ul>
+    </div><!-- /config -->
+
+    <div id="c"></div>
+    <div id="bg_c"></div>
+  </div>
+  
+</header>
+</body>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    //ocultamos txt
+    $('#txt').hide();
+    //barra draggalge
+    $('#config').draggable();
+    //creamos el CANVAS
+     var clic=false;
+     var x = "";
+     var y = "";
+     var canvas=document.getElementById("canvas");
+     //ancho y alto de la ventana 100%
+     canvas.width = window.innerWidth;
+     canvas.height = window.innerHeight;
+     var cntx = canvas.getContext("2d");
+     //border de la linea -> redondeado
+     cntx.lineCap = 'round';
+     //barra de tamaños
+    $(":input").change(function(){
+      $("#n_range").html($("#rr").val());
+      var a = $('#n_range').text();
+        cntx.lineWidth = a;
+    });
+
+     //si hacemos click
+     $("#canvas").mousedown(function(canvas){
+       clic=true;
+       cntx.save();
+       x = canvas.pageX-this.offsetLeft;
+       y = canvas.pageY-this.offsetTop;
+    });
+
+    $(document).mouseup(function(){
+       clic=false;
+    });
+
+    $(document).click(function(){
+       clic=false;
+    });
+    //pincel
+    //var valor = document.getElementById('herramientas option[value=""]');
+    $( "#herramientas" ).change(function() {
+        var str = "";
+        $( "#herramientas option:selected" ).each(function() {
+          str += $( this ).text();
+        });
+      //pincel
+        if (str == 'Pincel') {
+        $("#canvas").mousemove(function(canvas){
+           if(clic==true){
+               cntx.beginPath();
+               cntx.moveTo(canvas.pageX-this.offsetLeft,canvas.pageY-this.offsetTop);
+               cntx.lineTo(x, y);
+               cntx.stroke();
+               x = canvas.pageX-this.offsetLeft;
+               y = canvas.pageY-this.offsetTop;
+           }
+        });
+        $('#txt').hide();
+      }
+      //goma
+      if (str == 'Goma') {
+        $("#canvas").mousemove(function(canvas2){
+           if(clic==true){
+               cntx.beginPath();
+               cntx.moveTo(canvas.pageX-this.offsetLeft,canvas.pageY-this.offsetTop);
+               cntx.clearRect(x, y, $('#n_range').text(),$('#n_range').text());
+               cntx.stroke();
+               cntx.closePath();
+               x = canvas.pageX-this.offsetLeft;
+               y = canvas.pageY-this.offsetTop;
+           }
+        });
+        $('#txt').hide();
+      }
+      //tipografías
+      //texto que mostrar
+      if (str == 'Texto') {
+        $('#txt').show();
+        //escribimos
+        var texto = document.getElementById('valor_t');
+        ////////////
+        $("#canvas").mousedown(function(canvas){
+         var fnt = "";
+          $( "#texto option:selected" ).each(function() {
+            fnt += $( this ).text();
+          });
+           cntx.font = 'bold ' + $('#n_range').text()+'px' + ' ' + fnt;
+           clic=true;
+           cntx.save();
+           x = canvas.pageX-this.offsetLeft;
+           y = canvas.pageY-this.offsetTop;
+           var a = cntx.fillText($(texto).val(),x,y);
+           var s = $(texto).val("");
+        });
+      }
+        }).trigger( "change" );
+
+        //Añadimos color
+        var content = $('#color').val(); 
+        var c = $('#c');
+        c.html($(content));
+        $('#color').on('change', function() {
+          cntx.strokeStyle =  (this.value);
+          cntx.fillStyle = (this.value);
+      });
+      //color de fondo del canvas
+      $('#canvas').css('background-image','url("img/bgcanvas.png")');
+      var content = $('#bg_color').val(); 
+        var bgc = $('#bg_c');
+        bgc.html($(content));
+        $('#bg_color').on('change', function() {
+        $('#canvas').css('background-image','none');
+        $('#canvas').css('background-color',(this.value));
+      });
+      
+      //creamos la imágen del canvas
+      var jpeg = document.getElementById("jpeg");
+      jpeg.addEventListener("click",function(){ 
+        var dato = canvas.toDataURL("image/jpeg");
+        dato = dato.replace("image/jpeg", "image/octet-stream");
+        document.location.href = dato;  
+      },false);
+
+  });
+</script>
+
+</html>
